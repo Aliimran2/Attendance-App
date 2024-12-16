@@ -11,16 +11,16 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mias_solutions.attendanceapp.R
 import com.mias_solutions.attendanceapp.adapters.StudentAdapter
-import com.mias_solutions.attendanceapp.databinding.FragmentMainBinding
+import com.mias_solutions.attendanceapp.databinding.FragmentAttendanceBinding
 import com.mias_solutions.attendanceapp.viewmodels.StudentViewModel
 
 
-class MainFragment : Fragment(R.layout.fragment_main) {
+class AttendanceFragment : Fragment(R.layout.fragment_attendance) {
 
     private val studentViewModel: StudentViewModel by viewModels()
 
     private lateinit var studentAdapter: StudentAdapter
-    private var _binding: FragmentMainBinding? = null
+    private var _binding: FragmentAttendanceBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -28,7 +28,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         savedInstanceState: Bundle?
     ): View? {
         // Initialize the ViewBinding
-        _binding = FragmentMainBinding.inflate(inflater, container, false)
+        _binding = FragmentAttendanceBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -58,4 +58,6 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         // Clean up the binding reference to prevent memory leaks
         _binding = null
     }
+
+
 }

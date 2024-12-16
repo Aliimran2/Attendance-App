@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/menu_send_report"
         android:icon="@drawable/ic_send_report"
-        android:title="Send Report" />
+        android:title="Send Report"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_import_students"
+        android:title="Import from Excel"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menu_export_students"
+        android:title="Export to Excel"
+        app:showAsAction="never"/>
 </menu>

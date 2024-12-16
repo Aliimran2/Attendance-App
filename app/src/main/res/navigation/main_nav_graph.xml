@@ -3,11 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav_graph"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/welcomeFragment">
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.mias_solutions.attendanceapp.ui.MainFragment"
+        android:name="com.mias_solutions.attendanceapp.ui.AttendanceFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_attendance" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.mias_solutions.attendanceapp.ui.HistoryFragment"
+        android:label="HistoryFragment" />
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.mias_solutions.attendanceapp.ui.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 </navigation>
